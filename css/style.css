@@ -1,0 +1,423 @@
+/*****
+    MEDIA QUERIES
+*****/
+
+@media screen and (max-width:960px) {
+  .wrapper {
+    max-width:720px;
+  }
+
+  header .wrapper {
+    max-width:660px;
+  }
+}
+
+@media screen and (max-width:720px) {
+  .wrapper {
+    max-width:480px;
+  }
+
+  header .wrapper {
+    max-width:420px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .wrapper {
+    max-width:240px;
+  }
+}
+
+/*****
+    GENERAL STYLES
+*****/
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  display:none;
+  overflow:hidden;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+hr {
+  background-color:#000;
+  border-color:#fff;
+}
+
+header {
+  background:-moz-linear-gradient(top, #f4f4f4, #d4d4d4);
+  background:-webkit-linear-gradient(top, #f4f4f4, #dfdfdf);
+  border-bottom:1px solid #ccc;
+  display:block;
+  height:47px;
+}
+
+button {
+  padding:8px 12px;
+}
+
+.hide {
+  display:none;
+  height:0;
+  width:0;
+}
+
+/*****
+    GRID
+*****/
+
+#slider {
+  height:100%;
+  position:relative;
+  width:200%;
+}
+
+.panel {
+  background-image:url(../images/background.jpg);
+  display:block;
+  float:left;
+  width:100%;
+}
+
+.panel:first-child {
+  overflow-y:scroll;
+}
+
+.panel:last-child {
+  position:relative;
+  z-index:1;
+}
+
+/*****
+    MASONRY STYLES
+*****/
+
+.wrapper:nth-child(1) {
+  margin:0 auto;
+  width:900px;
+}
+
+.wrapper:nth-child(2) {
+  margin:30px auto;
+  position:relative;
+  width:960px;
+}
+
+#filters {
+  color:#8a8a8a;
+  text-align:center;
+}
+
+#filters li {
+  border-right:1px solid #bbb;
+  cursor:pointer;
+  display:inline-block;
+  font:bold 12px Arial, sans-serif;
+  margin-right:-4px;
+  padding:0 16px;
+}
+
+#filters li.selected {
+  color:#3b3b3b;
+}
+
+#filters li:last-child {
+  border:0;
+}
+
+#container {
+  margin:18px auto;
+  padding-left:12px;
+}
+
+.masonry-brick {
+  -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.item {
+  background-color:#fff;
+  box-shadow:0 1px 3px #b4b4b4;
+  color:#555;
+  cursor:pointer;
+  display:block;
+  font:bold 12px Arial, sans-serif;
+  line-height:1.8;
+  margin:15px;
+  overflow:hidden;
+  padding:10px 10px 46px 10px;
+  position:relative;
+  width:185px;
+  word-wrap:break-word;
+}
+
+.item.image .posted_by {  
+  background-color:#4fbb43;
+  color:#e1ece3;
+}
+
+.item.video .posted_by {  
+  background-color:#d2413b;
+  color:#ece1e1;
+}
+
+.item:hover {
+  border-color:#989898;
+  color:#2a2a2a;
+}
+
+.item:hover .posted_by {
+  color:#777;
+}
+
+.item.image:hover .posted_by, .item.video:hover .posted_by {
+  color:#fff;
+}
+
+.item:hover .posted_by_avatar {
+  opacity:0.85;
+}
+
+.item .content_thumbnail {
+  margin-bottom:5px;
+  width:100%;
+}
+
+.item .posted_by_avatar {
+  background:red;
+  border-radius:4px;
+  float:left;
+  height:24px;
+  margin:-1px 5px 0 -2px;
+  opacity:0.75;
+  width:24px;
+}
+
+.item.media {
+  width:425px;
+}
+
+.item p {
+  margin:0 2px 7px 2px;
+}
+
+.posted_by {
+  background-color:#f2f2f2;
+  border-top:1px solid #e0e0e0;
+  color:#999;
+  left:0;
+  padding:9px 10px 8px 10px;
+  position:absolute;
+  bottom:0;
+  width:185px;
+}
+
+.time_posted {
+  float:right;
+  right:0;
+}
+
+/*****
+    CONTENT VIEWER
+*****/
+
+#cover {
+  background-color:#000;
+  display:none;
+  left:0;
+  opacity:0.5;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:3;
+}
+
+#back {
+  background:url(../images/arrow.png) no-repeat center center #444;
+  display:block;
+  float:left;
+  position:relative;
+  width:50px;
+  z-index:4;
+}
+
+#back:hover {
+  background-color:#222;
+}
+
+#content_holder {
+  border:0;
+  display:block;
+  float:left;
+  left:50px;
+  position:absolute;
+  top:0;
+  z-index:3;
+}
+
+.highlight_name {
+  color:#9d9d9d;
+}
+
+.highlight_link {
+  color:#388fbd;
+}
+
+#image {
+  left:50%;
+  max-height:100%;
+  max-width:100%;
+  position:absolute;
+  top:50%;
+}
+
+#video {
+  left:50%;
+  margin:-180px 0 0 -320px;
+  position:absolute;
+  top:50%;
+}
+
+/*****
+    LOADING ANIMATION
+*****/
+
+.bar1 {
+  -moz-transform:rotate(0deg) translate(0, -40px);
+  -webkit-transform:rotate(0deg) translate(0, -40px);opacity:0.12;
+}
+.bar2 {
+  -moz-transform:rotate(45deg) translate(0, -40px);
+  -webkit-transform:rotate(45deg) translate(0, -40px);opacity:0.25;
+}
+.bar3 {
+  -moz-transform:rotate(90deg) translate(0, -40px);
+  -webkit-transform:rotate(90deg) translate(0, -40px);opacity:0.37;
+}
+.bar4 {
+  -moz-transform:rotate(135deg) translate(0, -40px);
+  -webkit-transform:rotate(135deg) translate(0, -40px);opacity:0.50;
+}
+.bar5 {
+  -moz-transform:rotate(180deg) translate(0, -40px);
+  -webkit-transform:rotate(180deg) translate(0, -40px);opacity:0.62;
+}
+.bar6 {
+  -moz-transform:rotate(225deg) translate(0, -40px);
+  -webkit-transform:rotate(225deg) translate(0, -40px);opacity:0.75;
+}
+.bar7 {
+  -moz-transform:rotate(270deg) translate(0, -40px);
+  -webkit-transform:rotate(270deg) translate(0, -40px);opacity:0.87;
+}
+.bar8 {
+  -moz-transform:rotate(315deg) translate(0, -40px);
+  -webkit-transform:rotate(315deg) translate(0, -40px);opacity:1;
+}
+
+#loading {
+  height:106px;
+  left:50%;
+  margin:-53px 0 0 -23px;
+  position:absolute;
+  top:50%;
+  width:96px;
+  z-index:1;
+  -webkit-animation-name:rotateThis;
+  -webkit-animation-duration:1s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+
+#loading div {
+  background-color:#888;
+  border-radius:50%;
+  box-shadow:black 0 0 4px;
+  height:24px;
+  left:40px;
+  position:absolute;
+  top:40px;
+  width:16px;
+  z-index:1;
+}
+
+@-webkit-keyframes rotateThis {
+  from {
+    -webkit-transform:scale(0.5) rotate(0deg);
+  }
+  to {
+    -webkit-transform:scale(0.5) rotate(360deg);
+  }
+} 
+
+
+
+h1 {
+  text-align:center;
+  font-size:200%;
+
+}
+
+#logout {
+  margin-right:-10px;
+  margin-top: 12px;
+  float:right;
+}
+
+#loginlogo 
+{
+  width:100%;
+  text-align:center;
+  margin-top:10%;  
+}
+
+#headerlogo {
+  margin-left:5px;
+  margin-top:10px;
+}
+
+#logout
+{
+  float:right;
+  margin-right:-10px;
+  margin-top:12px;
+}
+
+#timeline
+{
+  float:right;
+  margin-right:105px;
+  margin-top:12px;
+}
+
+#popular
+{
+  float:right;
+  margin-right:100px;
+  margin-top:12px;
+}
+
+#logout:hover {
+  background-color:#e4e4e4;
+  text-decoration:underline overline;
+}
+
+#timeline:hover {
+  background-color:#e4e4e4;
+  text-decoration:underline overline;
+}
+
+#popular:hover {
+  background-color:#e4e4e4;
+  text-decoration:underline overline;
+}
